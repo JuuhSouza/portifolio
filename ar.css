@@ -1,0 +1,614 @@
+@charset "utf-8" ;
+
+@font-face {
+    font-family:fonte;
+    src: url(fonte/Super\ Positive\ Personal\ Use.ttf);
+  }
+
+:root{
+    --cor-primaria:#49AABF ;
+    --cor-secundaria: #4AA2D9;
+    --cor-background:#CEEFF2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-background);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* cabeçalho */
+header {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    pointer-events: none;
+    margin-right: 27px;
+}
+
+.logo img {
+    height: 6em;
+    width: 6em;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.8s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: var(--cor-primaria);
+    color: white;
+}
+
+/* FINAL cabeçalho */
+
+
+/*parallax */
+h1, h2 {
+    font-family:fonte;
+    font-weight: 900;/* negrito tensidade */
+    color: #ffffff;
+    font-size: 2em;
+    letter-spacing: 4px;
+    text-shadow: 2px 3px 5px #000000;
+
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+main{
+    display: block;
+    background-color: var(--cor-primaria) ;
+}
+
+.container2{
+    width: 100%;
+    max-width: 760px; /* largura máxima */
+    margin: 0 auto; /* auterar a margem */
+    padding: 0 15px;
+    animation: surgir 5s ;
+    animation-timeline: view(); /*  aparecer de acordo com a rolagem */
+    animation-range: cover 0 cover 60%; /* animar ultima parte */
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+section.modulo h2{ /* titulo */
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: linear-gradient(0deg, #ceeff2 21%, #4AA2D9 40%, #49aabf 86%);
+
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%; /* posição da imagem */
+    background-repeat: no-repeat; /* n repetir imagem */
+    background-size: cover; /* covrir container */
+    background-attachment: fixed; /* fixar imagem no fundo */
+
+}
+
+section.modulo.parallax h1{
+    color:#ffffffd0 ;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 3em;
+    font-size: 2em;
+    text-transform: uppercase;
+    z-index: 50; /* profundidade do plano */
+
+}
+
+section.modulo.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8; /* sensação de profundidade */
+    position: absolute;
+    background: linear-gradient(0deg, #49aabf 24%, rgba(166,145,141,0.31416316526610644) 77%); /* degrade da imagem */
+    
+}
+
+section.modulo.parallax-1{
+    background-image: url(https://cdn.pixabay.com/photo/2020/09/01/06/00/sky-5534319_1280.jpg);
+}
+
+section.modulo.parallax-2{
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/07/19/clouds-1868060_1280.jpg);
+}
+
+/* final parallax */
+
+/* projetos */
+
+.containerImg{
+    position: relative;
+    width: 80%;
+    height: 25em;
+    margin-left: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    margin: 2em;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background: rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    transition: 0.5s;
+    animation: Animacard 4s linear infinite;
+    background: linear-gradient(315deg, #00ccff,#A60505);
+}
+
+.box:hover::before{
+    inset: -20px 0px;
+}
+
+@keyframes Animacard{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background: black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content2{
+    position: absolute;
+    inset: 30px;
+    background: var(--cor-background);
+    border: 6px solid var(--cor-primaria);
+    background-size: cover;
+    z-index: 3;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.content2 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    z-index: 3;
+    pointer-events: none;
+
+}
+
+.box:hover .content2 img{
+    opacity: 0;
+
+}
+
+h2{
+    position: relative;
+    z-index: 2;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight:500 ;
+    letter-spacing: 0.05em;
+    line-height: 1.25em;
+    text-transform: uppercase;
+}
+
+h2 span{
+    font-weight: 300;
+    font-size: 0.75em;
+    color: var(--cor-secundaria);
+    text-shadow: 0px 0px 1px white;
+}
+
+.content2 a{
+    position: relative;
+    background-color: var(--cor-primaria);
+    color: #CEEFF2;
+    padding: 10px 20px;
+    border-radius: 20%;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover{
+    letter-spacing: 0.2em;
+}
+
+/* final projetos */
+
+.projetos{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.projetos h2{
+   color: rgb(255, 255, 255);
+   font-size: 2em;
+   text-shadow: 1px 4px 2px rgb(0, 0, 0);
+   letter-spacing: 5px;
+   background-color: var(--cor-primaria);
+   padding: 1.4em;
+   border-radius: 20% 2%;
+   box-shadow: 2px 4px 2px black;
+}
+
+/* card turotial */
+.container{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .card{
+    position: relative;
+    padding: 8px;
+    width: 300px;
+    margin: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.container .card img{
+    transition: 0.5s;
+    align-items: center;
+    width: 17em;
+    height: 14em;
+    border-radius: 20px;
+}
+
+.container .card:hover img{
+    align-items: center;
+    width: 17em;
+    height: 15em;
+}
+
+.container .card h1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    background-color: var(--cor-primaria);
+    border-radius: 20% 2%;
+    margin: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.container .card h3{
+    font-size: 1.5em;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    font-family: fonte;
+    letter-spacing: 1px;
+}
+
+.container .card:hover h3{
+    font-size: 1.5em;
+    margin: 2px;
+    color:blue ;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    
+}
+
+
+.container .card .content{
+    padding: 10px;
+    text-align: center;
+}
+
+.container .card .content p{
+    transition: 0.5s;
+    color: black ;
+
+}
+
+.container .card:hover{
+    background-color: var(--cor-primaria);
+    margin-top: -30px;
+    box-shadow: 2px 20px 25px var(--cor-secundaria);
+    border-color: blue;
+}
+
+
+.container .card:hover .content p{
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+/* final card */
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+    position: relative;
+    widows: 100%;
+    background:#3587F2 ;
+    min-height: 100px;
+    padding: 20px 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10em;
+}
+
+footer .social_icon,
+footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .social_icon li,
+footer .menu li{
+    list-style: none; /* tirar ponto */
+}
+
+footer .social_icon li a{
+    font-size: 2em;
+    color: #fff;
+    background-color: transparent;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+footer .social_icon li a:hover{
+    transform: translateY(-10px);
+   
+}
+
+footer .menu li a{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    background-color: transparent;
+}
+
+footer .menu li a:hover{
+    opacity: 1;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+footer .onda{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:url(img/wave.png);
+    background-size: 1000px 100px;
+    
+}
+
+footer .onda#onda1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation:  animaonda 4s linear infinite;
+}
+
+footer .onda#onda2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation:  animaonda2 4s linear infinite;
+}
+
+footer .onda#onda3{
+    z-index: 999;
+    opacity:0.2;
+    bottom: 15px;
+    animation:  animaonda2 3s linear infinite;
+}
+
+footer .onda#onda4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation:  animaonda2 3s linear infinite;
+}
+
+@keyframes animaonda{
+    0%{
+        background-position-x: 1000px;
+    }
+
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animaonda2{
+    0%{
+        background-position-x: 0px;
+    }
+
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+/* responsividade */
+
+@media screen and (max-width: 1000px) {
+
+    
+    /* cabeçalho */
+    header {
+        flex-direction:column;
+        padding: 2em;
+    
+    }
+    
+    .logo img {
+        height:3em;
+        width:3em;
+    }
+  
+    /* FINAL cabeçalho */
+    
+    /* linguagens */
+    
+    .containerImg{
+        margin-left: 25em;
+        width: 40%;
+        height: 25em;
+        display: inline-block;
+    }
+    
+    /* final linguagens */
+    
+    .projetos{
+        margin-top: 40em;
+      
+        
+    }
+/*parallax */
+section.modulo.parallax h1{
+    text-align: center;
+    padding: 20em;
+    font-size: 1.3em;
+}
+
+/* final parallax */
+
+/* projetos */
+
+.containerImg{
+    position: relative;
+    width: 40%;
+    height: 25em;
+    margin-left: 25em;
+    display: inline-block;
+}
+
+.projetos{
+    margin-top: 40em;
+ }
+ 
+
+/* card turotial */
+.container{
+    padding: 20px;
+    display: inline-block;
+}
+
+.container .card{
+    margin-left: 27em;
+}
+
+
+
+/* final card */
+
+    
+    /* final responsividade */
+    
+}
