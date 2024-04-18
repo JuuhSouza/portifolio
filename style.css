@@ -762,13 +762,6 @@ footer .onda#onda4 {
  
 }
 
-.dark-mode .container .card:hover .box .content h3,
-.container .card:hover .box .content p {
-    color: rgb(255, 255, 255);
-
-}
-
-
 .dark-mode .container .card .box .content a {
     background: #000000;
     color: white;
