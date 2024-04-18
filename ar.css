@@ -683,7 +683,7 @@ section{
 }
 
 .darkmode input:checked~.toggle{
-    background: #ffffffbc;
+     background: #00000082;
 }
   /* final botao */
 /*final  dark mode */
