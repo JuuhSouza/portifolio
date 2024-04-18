@@ -10,6 +10,10 @@
     --cor-primaria: #260202;
     --cor-secundaria: #A60505;
     --cor-background:#A6918D;
+    --cor-azul-primaria: #011C40;
+    --cor-azul-secundaria: #347EBF;
+    --cor-azul-background:#91D7F2;
+
 }
 
 html {
@@ -20,18 +24,18 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
+
 body{
     scroll-behavior: smooth;
-    background-color: var(--cor-background);
+    background-color:var(--cor-azul-background);
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 /* cabeçalho */
 header {
-    
+    margin: 1em;
     position: absolute;
     top: 0;
     left: 0;
@@ -56,6 +60,7 @@ header {
 }
 
 .navigation a {
+    font-size: 1.5em;
     font-family: fonte;
     text-decoration: none;
     color: #ffffff;
@@ -71,12 +76,7 @@ header {
     background: var(--cor-primaria);
     color: white;
 }
-
 /* FINAL cabeçalho */
-
-
-
-
 
 /*parallax */
 h1, h2 {
@@ -123,7 +123,7 @@ section.modulo h2{ /* titulo */
 
 section.modulo.content{
     padding: 40px 0;
-    background: linear-gradient(0deg, rgba(166,145,141,1) 21%, rgba(123,97,95,1) 40%, rgba(38,2,2,1) 86%);
+    background: linear-gradient(0deg, #91D7F2 21%, #347EBF 40%, #011C40 86%);
 
 }
 
@@ -158,17 +158,26 @@ section.modulo.parallax:after{
     width: 100%;
     z-index: 8; /* sensação de profundidade */
     position: absolute;
-    background: linear-gradient(0deg, rgba(38,2,2,1) 24%, rgba(166,145,141,0.31416316526610644) 77%); /* degrade da imagem */
+    background: linear-gradient(0deg, #011C40 24%, #91d7f25f 77%); /* degrade da imagem */
     
 }
 
 section.modulo.parallax-1{
-    background-image: url(https://cdn.pixabay.com/photo/2023/12/13/15/07/ai-generated-8447068_960_720.png);
+    background-image: url(img/AdobeStock_322142069.jpeg);
 }
 
-section.modulo.parallax-2{
-    background-image: url(https://cdn.pixabay.com/photo/2023/12/13/15/07/ai-generated-8447068_960_720.png);
+section .javascript{
+    text-align: center;
+
 }
+
+/* section.modulo.parallax-2{
+    background-image: url(https://as2.ftcdn.net/v2/jpg/06/22/90/15/1000_F_622901528_mjw8Qvm4bu1bJKVYMhePgIsi6lS1ju8D.jpg);
+}
+
+section.modulo.parallax-3{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/00/23/64/98/1000_F_23649850_52gsUKOCRNJHQA8EM1ZLwOwP1g1wyphu.jpg);
+} */
 
 /* final parallax */
 
@@ -176,8 +185,8 @@ section.modulo.parallax-2{
 
 .containerImg{
     position: relative;
-    width: 90%;
-    height: 30em;
+    width: 95%;
+    height: 25em;
     margin-left: 2em;
     display: flex;
     align-items: center;
@@ -189,7 +198,7 @@ section.modulo.parallax-2{
     position: relative;
     width: 70%;
     height: 70%;
-    background: rgba(0, 0, 0,0.5);
+    background: rgba(102, 253, 241, 0.5);
     overflow: hidden;
     border-radius: 50%;
     display: flex;
@@ -204,7 +213,7 @@ section.modulo.parallax-2{
     inset: -10px 140px;
     transition: 0.5s;
     animation: Animacard 4s linear infinite;
-    background: linear-gradient(315deg, #00ccff,#A60505);
+    background: linear-gradient(315deg, #0051ff,#A60505);
 }
 
 .box:hover::before{
@@ -224,7 +233,7 @@ section.modulo.parallax-2{
     content: "";
     position: absolute;
     inset: 6px;
-    background: black;
+    background: var(--cor-azul-background);
     border-radius: 50%;
     z-index: 1;
 }
@@ -232,8 +241,8 @@ section.modulo.parallax-2{
 .content2{
     position: absolute;
     inset: 30px;
-    background: var(--cor-background);
-    border: 6px solid var(--cor-primaria);
+    background: var(--cor-azul-background);
+    border: 6px solid var(--cor-azul-primaria);
     background-size: cover;
     z-index: 3;
     border-radius: 50%;
@@ -259,7 +268,6 @@ section.modulo.parallax-2{
 
 .box:hover .content2 img{
     opacity: 0;
-
 }
 
 h2{
@@ -277,13 +285,13 @@ h2{
 h2 span{
     font-weight: 300;
     font-size: 0.75em;
-    color: var(--cor-secundaria);
+    color: var(--cor-azul-secundaria);
     text-shadow: 0px 0px 1px white;
 }
 
 .content2 a{
     position: relative;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-azul-primaria);
     color: #CEEFF2;
     padding: 10px 20px;
     border-radius: 20%;
@@ -310,7 +318,7 @@ a:hover{
    font-size: 2em;
    text-shadow: 1px 4px 2px rgb(0, 0, 0);
    letter-spacing: 5px;
-   background-color: var(--cor-secundaria);
+   background-color:var(--cor-azul-primaria);
    padding: 1.4em;
    border-radius: 20% 2%;
    box-shadow: 2px 4px 2px black;
@@ -352,27 +360,18 @@ a:hover{
     height: 15em;
 }
 
-.container .card h1{
-    font-size: 2rem;
-    letter-spacing: 1px;
-    background-color: #260202;
-    border-radius: 20% 2%;
-    margin: 2px;
-    color: rgb(255, 255, 255);
-}
-
 .container .card h3{
     font-size: 1.5em;
     margin: 2px;
     color: rgb(0, 0, 0);
-    font-family: fonte;
-    letter-spacing: 1px;
+    font-family: sans-serif;
+
 }
 
 .container .card:hover h3{
     font-size: 1.5em;
     margin: 2px;
-    color:#b5b2b2aa ;
+    color:#ffffff ;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
     
 }
@@ -394,8 +393,8 @@ a:hover{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #260202;
-    color: white;
+    background-color: var(--cor-azul-background);
+    color: rgb(0, 0, 0);
     border-radius: 40px;
     text-decoration: none;
     transition: 0.5s;
@@ -404,14 +403,10 @@ a:hover{
 }
 
 .container .card:hover{
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-azul-background);
     margin-top: -30px;
-    box-shadow: 2px 20px 25px var(--cor-secundaria);
-    border-color: var(--cor-secundaria);
-}
-
-.container .card:hover img{
-    filter: invert(1);
+    box-shadow: 2px 20px 25px var(--cor-azul-secundaria);
+    border-color: var(--cor-azul-secundaria);
 }
 
 .container .card:hover .content p{
@@ -423,14 +418,6 @@ a:hover{
     background-color: white;
 }
 /* final card */
-
-
-
-
-
-
-
-
 
 
 /* footer */
@@ -560,6 +547,250 @@ footer .onda#onda4 {
 /* final footer */
 
 
+/* background animado */
+/* feito com tutorial background */
+
+.container{
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(ellipse at top, rgba(255, 255, 255,0.1) 0%, rgba(237, 237, 237, 0.4) 100%);
+    margin: 0 4px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    box-shadow: 5px 5px 10px 0px #00a0b9;
+    animation: animaf 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+        
+
+}
+
+.bubbles span:nth-child(even){
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255,0.1) 0%, rgba(237, 237, 237, 0.4) 100%);
+    box-shadow:0 0 40px #047181,
+    0 0 80px #00a0b9,
+    0 0 100px #00a0b9;
+}
+
+@keyframes animaf {
+    0%{
+        transform:translateY(100vh) scale(0);
+        
+    }
+    100%{
+        transform:translateY(-10vh) scale(1);
+
+    }
+}
+
+/* final background animado */
+
+
+/* background */
+
+/* darmk mode */
+
+.dark-mode{
+    background-color:#793b2f ;
+}
+
+/*parallax */
+.dark-mode h1, h2 {
+    font-family: fonte;
+    font-weight: 900;/* negrito tensidade */
+    color: #ff0000;
+    text-shadow: 2px 3px 5px #000000;
+}
+
+.dark-mode .modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+.dark-mode .modulo.content{
+    padding: 40px 0;
+    background: linear-gradient(0deg, #793b2f 21%, #775350 40%, #260202 86%);
+}
+
+.dark-mode .modulo.parallax h1{
+    color:#f59595 ;
+    text-shadow: 2px 2px 2px #993f3f;
+}
+
+.dark-mode .modulo.parallax:after{
+    background: linear-gradient(0deg, #260202 24%, #91d7f24f 77%);
+}
+
+.dark-mode .modulo.parallax-1{
+    background-image: url(https://i.pinimg.com/originals/2e/78/c7/2e78c79cebbd4632cd41546a3138013e.gif);
+}
+
+.dark-mode .modulo.parallax-3{
+    background-image: url(https://img.freepik.com/fotos-gratis/montanha-de-fogo_460848-6874.jpg);
+}
+
+/* final parallax */
+
+/* linguagens */
+.dark-mode .content2{
+    background: var(--cor-background);
+    border: 6px solid var(--cor-primaria);
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode  span{
+    color: var(--cor-secundaria);
+    text-shadow: 0px 0px 1px white;
+}
+
+.dark-mode .content2 a{
+    background-color: var(--cor-primaria);
+    color: #CEEFF2;
+}
+
+.dark-mode .box{
+    background: rgba(253, 102, 102, 0.5);
+}
+
+.dark-mode .box::after{
+    background: var(--cor-background);
+}
+/* final linguagens */
+
+/* card turotial */
+.dark-mode .container .card{
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-secundaria);
+}
+
+.dark-mode .container .card h3{
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.dark-mode .container .card:hover h3{
+    color:var(--cor-primaria) ;
+    text-shadow: 1px 1px 2px rgb(124, 123, 123);
+}
+
+.dark-mode .container .card .content p{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .container .card .content a{
+    background-color: #521c1c;
+    color: white;
+}
+
+.dark-mode .container .card:hover{
+    background-color: var(--cor-background);
+    box-shadow: 2px 20px 25px var(--cor-secundaria);
+    border-color: var(--cor-primaria);
+}
+
+.dark-mode .container .card:hover .content p{
+    color: rgb(0, 0, 0);
+    /* font-weight: 500; */
+/*     text-shadow: 1px 2px 2px rgb(255, 255, 255); */
+}
+
+.dark-mode .container .card:hover .content a{
+    color: rgba(255, 255, 255, 0.63);
+    background-color: #521c1c;
+}
+
+/* final card */
+
+.dark-mode .projetos h1{
+   color: rgb(255, 255, 255);
+   background-color:var(--cor-secundaria);
+   box-shadow: 2px 4px 2px black;
+}
+
+/* botao dark mode feito com ajuda */
+section{
+    top: 0;
+    left: 1;
+}
+
+.darkmode label{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+
+.darkmode input{
+    position: absolute;
+    opacity: 0;
+}
+
+#light{
+    position: absolute;
+    font-size: 2em;
+    color: #393939;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#light{
+    transition-delay: .8s ;
+    transform: scale(1) rotate(360deg);
+}
+
+#dark{
+    font-size: 1.5em;
+    color: #b0b0b0;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#dark{
+    transition-delay: 0s ;
+    transform: rotate(360deg) scale(0);
+}
+
+.toggle{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #00000082;
+    border-radius: 50%;
+    box-shadow: 
+    inset 0 8px 60px rgba(0, 0 ,0, .1),
+    inset 0 8px 8px rgba(0, 0 ,0, .1),
+    inset 0 -4px 4px rgba(0, 0 ,0, .1);
+    z-index: -1;
+    transition: 1s;
+}
+
+.darkmode input:checked~.toggle{
+    background: #ffffffbc;
+}
+  /* final botao */
+/*final  dark mode */
+
 /* responsividade */
 
 @media screen and (max-width: 1000px) {
@@ -596,7 +827,7 @@ header {
 
 .projetos{
     margin: 2em;
-    margin-top: 40em;
+    margin-top: 60em;
      
  }
 

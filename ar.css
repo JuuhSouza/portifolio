@@ -9,6 +9,10 @@
     --cor-primaria:#49AABF ;
     --cor-secundaria: #4AA2D9;
     --cor-background:#CEEFF2;
+    --cor-dark-primaria:#327584 ;
+    --cor-dark-secundaria: #023351;
+    --cor-dark-background:#7e7e7e;
+
 }
 
 html {
@@ -55,6 +59,7 @@ header {
 }
 
 .navigation a {
+    font-size: 1.5em;
     text-decoration: none;
     color: white;
     padding: 6px 20px;
@@ -140,10 +145,11 @@ section.modulo.parallax{
 }
 
 section.modulo.parallax h1{
-    color:#ffffffd0 ;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    color:#000000d0 ;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
     text-align: center;
     margin-top: 3em;
+    padding: 10em;
     font-size: 2em;
     text-transform: uppercase;
     z-index: 50; /* profundidade do plano */
@@ -156,12 +162,12 @@ section.modulo.parallax:after{
     width: 100%;
     z-index: 8; /* sensação de profundidade */
     position: absolute;
-    background: linear-gradient(0deg, #49aabf 24%, rgba(166,145,141,0.31416316526610644) 77%); /* degrade da imagem */
+    background: linear-gradient(0deg, rgba(73,170,191,1) 18%, rgba(206,239,242,0.1825105042016807) 50%); /* degrade da imagem */
     
 }
 
 section.modulo.parallax-1{
-    background-image: url(https://cdn.pixabay.com/photo/2020/09/01/06/00/sky-5534319_1280.jpg);
+    background-image: url(https://images.ecycle.com.br/wp-content/uploads/2022/11/04124608/pexels-brett-sayles-1431822-scaled.jpg.webp);
 }
 
 section.modulo.parallax-2{
@@ -350,31 +356,19 @@ a:hover{
     height: 15em;
 }
 
-.container .card h1{
-    font-size: 2rem;
-    letter-spacing: 1px;
-    background-color: var(--cor-primaria);
-    border-radius: 20% 2%;
-    margin: 2px;
-    color: rgb(255, 255, 255);
-}
-
 .container .card h3{
     font-size: 1.5em;
     margin: 2px;
     color: rgb(0, 0, 0);
-    font-family: fonte;
-    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-shadow: 0px 1px 2px white;
 }
 
 .container .card:hover h3{
     font-size: 1.5em;
     margin: 2px;
-    color:blue ;
-    text-shadow: 2px 2px 2px rgb(255, 255, 255);
-    
+    color:#000000aa ;
 }
-
 
 .container .card .content{
     padding: 10px;
@@ -384,7 +378,6 @@ a:hover{
 .container .card .content p{
     transition: 0.5s;
     color: black ;
-
 }
 
 .container .card:hover{
@@ -394,22 +387,12 @@ a:hover{
     border-color: blue;
 }
 
-
 .container .card:hover .content p{
     color: white;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 /* final card */
-
-
-
-
-
-
-
-
-
 
 /* footer */
 footer{
@@ -534,6 +517,176 @@ footer .onda#onda4{
         background-position-x: 1000px;
     }
 }
+
+/* darmk mode */
+
+.dark-mode{
+    background-color:#002032 ;
+}
+
+/*parallax */
+.dark-mode h1, h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 3px 5px #000000;
+}
+
+.dark-mode .modulo.content{
+    background: linear-gradient(0deg, #002032 21%, #346975dd 40%, #002032 86%);
+}
+
+.dark-mode .modulo.parallax h1{
+    color:#ececec ;
+    text-shadow: 2px 2px 2px #000d3f;
+}
+
+.dark-mode .modulo.parallax:after{
+    background: linear-gradient(0deg, #002032 24%, #91d7f24f 77%);
+}
+
+.dark-mode .modulo.parallax-1{
+    background-image: url(https://i.pinimg.com/736x/ef/94/95/ef949502ce5be5e2939e08215dc09588.jpg);
+}
+
+.dark-mode .modulo.parallax-2{
+    background-image: url(https://img.freepik.com/fotos-premium/um-ceu-azul-escuro-com-nuvens-e-o-sol-brilhando-por-entre-as-nuvens_853645-5682.jpg);
+}
+
+/* final parallax */
+
+/* linguagens */
+.dark-mode .content2{
+    background: var(--cor-dark-background);
+    border: 6px solid var(--cor-dark-primaria);
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode  span{
+    color: var(--cor-dark-secundaria);
+    text-shadow: 0px 0px 1px white;
+}
+
+.dark-mode .content2 a{
+    background-color: var(--cor-dark-primaria);
+    color: #CEEFF2;
+}
+
+.dark-mode .box{
+    background: #002032;
+}
+
+.dark-mode .box::after{
+    background: var(--cor-dark-background);
+}
+/* final linguagens */
+
+/* card turotial */
+.dark-mode .container .card{
+    background-color: #353535;
+    border: 1px solid var(--cor-dark-secundaria);
+}
+
+.dark-mode .container .card h3{
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.dark-mode .container .card:hover h3{
+    color:black ;
+    text-shadow: 1px 1px 2px rgb(124, 123, 123);
+}
+
+.dark-mode .container .card .content p{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(124, 123, 123);
+}
+
+.dark-mode .container .card:hover{
+    background-color: var(--cor-dark-background);
+    box-shadow: 2px 20px 25px var(--cor-primaria);
+    border-color: var(--cor-dark-primaria);
+}
+
+.dark-mode .container .card:hover .content p{
+    color: rgb(0, 0, 0);
+}
+/* final card */
+
+.dark-mode .projetos h1{
+   color: rgb(255, 255, 255);
+   background-color:var(--cor-dark-secundaria);
+   box-shadow: 2px 4px 2px black;
+}
+
+/* botao dark mode feito com ajuda */
+section{
+    top: 0;
+    left: 1;
+}
+
+.darkmode label{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+
+.darkmode input{
+    position: absolute;
+    opacity: 0;
+}
+
+#light{
+    position: absolute;
+    font-size: 2em;
+    color: #393939;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#light{
+    transition-delay: .8s ;
+    transform: scale(1) rotate(360deg);
+}
+
+#dark{
+    font-size: 1.5em;
+    color: #b0b0b0;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#dark{
+    transition-delay: 0s ;
+    transform: rotate(360deg) scale(0);
+}
+
+.toggle{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #00000082;
+    border-radius: 50%;
+    box-shadow: 
+    inset 0 8px 60px rgba(0, 0 ,0, .1),
+    inset 0 8px 8px rgba(0, 0 ,0, .1),
+    inset 0 -4px 4px rgba(0, 0 ,0, .1);
+    z-index: -1;
+    transition: 1s;
+}
+
+.darkmode input:checked~.toggle{
+    background: #ffffffbc;
+}
+  /* final botao */
+/*final  dark mode */
 
 /* responsividade */
 

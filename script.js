@@ -42,4 +42,14 @@ overlay.addEventListener('click', ()=> {
 
 //final mobile
 
+/* dark mode */
+
+const check = document.getElementById('check');
+
+check.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+})
+
+/*final  dark mode */
+
 
