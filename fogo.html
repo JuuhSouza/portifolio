@@ -25,20 +25,39 @@
     </nav>
      <!-- dark-mode -->
      <section class="darkmode">
-
         <label>
             <input id="check" type="checkbox" id="check">
             <i class="fa-solid fa-lightbulb" id="light"></i>
             <i class="fa-solid fa-lightbulb" id="dark"></i>
           <!--  <i class="fa-regular fa-lightbulb" id="light"></i> -->
-    
             <span class="toggle"></span>
         </label>
-    
     </section>
 <!-- final dark-mode -->
+
+ <!--  mobile -->
+
+ <div class="btn-abrir-manu" id="btn-menu">
+    <i class="fa-solid fa-list"></i>
+</div>
+
+<div class="menu-mobile" id="menu-mobile">
+    <div class="btn-fechar"> 
+        <i class="fa-solid fa-x"></i>
+    </div>
+    <nav>
+        <h1>Venha conhecer os elementos</h1>
+        <a href="index.html" class="active"> <i class="fa-solid fa-earth-americas"></i> Terra</a>
+        <a href="#agua"> <i class="fa-solid fa-water"></i> Água</a>
+        <a href="fogo.html"> <i class="fa-solid fa-fire"></i>Fogo</a>
+        <a href="ar.html"> <i class="fa-solid fa-wind"></i>Ar</a>
+    </nav>
+</div>
+
+<div class="overlay-menu" id="overlay-menu"></div>
+
+    <!--  final mobile -->
     </header>
-    
       <!-- parallax -->
     
     <div class="wrapper">
@@ -52,7 +71,6 @@
                     <h2>Linguagens</h2>
 
                 </div>
-
                 
                 <!-- final parallax -->
     <!-- linguagens -->
@@ -215,7 +233,7 @@
     <!-- final card7 -->
 </div>
 
-    <div class="projetos">
+    <div class="projetos" id="HTML">
         <h1> Trabalhos em HTML e CSS</h1>
     </div>
 
@@ -418,78 +436,6 @@
         
     </div>
     
-
-    <!-- final card6 -->
-
-    <!-- card7  -->
-    <!-- <div class="card" id="java">
-        <div class="img">
-            <img src="img/ar.icon.png" alt="">
-        </div>
-        
-        <h3>titulo</h3>
-        <div class="content">
-            <p>...</p>
-            <a href="">Repositório</a>
-            <a href="">Site</a>
-        </div>
-    </div> -->
-
-    <!-- final card7 -->
-</div>
-
-<!-- final card -->
-<!-- 
-            </section> -->
-
-             <!-- parallax -->
-<!-- 
-             <section class="modulo parallax parallax-3">
-                <h1> PHP</h1>
-            </section>
-
-            <section class="modulo content">
-                <div class="container2">
-                    <h2> Evolução PHP</h3>
-
-                </div> -->
-
-                <!-- final parallax -->
-
-                <!-- card1 -->
-    <!-- <div class="container">
-        <div class="card" id="java">
-            <div class="img">
-                <img src="projetos/tabuada.jpeg" alt="">
-            </div>
-        
-            <h3>Tabuada</h3>
-            <div class="content">
-                <p>Primeiro projeto em php.</p>
-                <a href="">Repositório</a>
-                <a href="">Site</a>
-            </div>
-        </div>
-     -->
-        
-    <!-- card1 final -->
-
-    <!-- card2 -->
-<!-- 
-        <div class="card" id="java">
-            <div class="img">
-                <img src="projetos/tabuada.jpeg" alt="">
-            </div>
-        
-            <h3>Tabuada</h3>
-            <div class="content">
-                <p>Primeiro projeto em php.</p>
-                <a href="">Repositório</a>
-                <a href="">Site</a>
-            </div>
-        </div>
-         -->
-    <!-- card2 final -->
         </main>
 
 <!-- footer -->
@@ -505,7 +451,7 @@
     <ul class="social_icon">
         <li><a href="https://github.com/JuuhSouza"><i class="fa-brands fa-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/j%C3%BAlia-souza-0577572b2/"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="https://www.instagram.com/juliasouzak4/"> <i class="fa-brands fa-instagram"></i></a></li>
+      <!--   <li><a href="https://www.instagram.com/juliasouzak4/"> <i class="fa-brands fa-instagram"></i></a></li> -->
     </ul>
 
     <ul class="menu">
@@ -519,18 +465,36 @@
     <p>Desenvolvido por Júlia Souza | &copy; 2024 Desenvolvimento Web Full Stack IOS</p>
     
    </footer>
-
 </section>
-
    <!-- footer final -->
 
    <script>
+//mobile
+
+let btnMenu = document.getElementById('btn-menu');
+let menu = document.getElementById('menu-mobile');
+let overlay = document.getElementById('overlay-menu');
+
+btnMenu.addEventListener('click', ()=> {
+    menu.classList.add('abrir-menu');
+})
+
+menu.addEventListener('click', ()=> {
+    menu.classList.remove('abrir-menu');
+})
+
+overlay.addEventListener('click', ()=> {
+    menu.classList.remove('abrir-menu');
+})
+//final mobile
+
+    /* dark-mode */
      const check = document.getElementById('check');
 
 check.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 })
-
+/* final dark-mode */
    </script>
     
 

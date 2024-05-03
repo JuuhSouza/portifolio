@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +7,9 @@
 
 }
 
-@font-face{
+@font-face {
     font-family: fonte;
     src: url(fonte/Super\ Positive\ Personal\ Use.ttf);
-
 }
 
 :root {
@@ -30,14 +31,12 @@ body {
     background-color: var(--cor-background);
     min-height: 100vh;
     width: 100%;
-     position: relative;
+    position: relative;
     overflow-x: hidden;
     transition: background-color 0.5s ease;
-
 }
 
 header {
-    
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +51,6 @@ header {
 .logo {
     font-size: 2em;
     pointer-events: none;
-    margin-right: 27px;
 }
 
 .logo img {
@@ -79,9 +77,8 @@ header {
 }
 
 /* mobile*/
-
-.overlay-menu{
-    background-color: #0000009c;
+.overlay-menu {
+    background-color: #000000c0;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -91,28 +88,25 @@ header {
     display: none;
 }
 
-.btn-abrir-manu i{
-    
+.btn-abrir-manu i {
     display: none;
     color: #ffffff;
     background-color: #003329;
-    text-shadow: 2px 2px 2px black;
     border-radius: 20px;
     padding: 8px;
-    margin-left: 6em;
+    margin-top: -1em;
+    margin-left: 4em;
     font-size: 2em;
 }
 
-.menu-mobile h1{
+.menu-mobile h1 {
     color: white;
     text-align: center;
     font-size: 1.8em;
-    
-    
 }
 
-.menu-mobile{
-    background-color: #003329;
+.menu-mobile {
+    background: linear-gradient(0deg, rgba(94, 137, 133, 0.5290023201856149) 7%, rgba(0, 51, 41, 1) 36%);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -123,49 +117,47 @@ header {
     transition: .5s;
 }
 
-.menu-mobile.abrir-menu{
+.menu-mobile.abrir-menu {
     width: 70%;
 }
 
-.menu-mobile.abrir-menu ~ .overlay-menu{
+.menu-mobile.abrir-menu~.overlay-menu {
     display: block;
 }
 
-.menu-mobile nav{
+.menu-mobile nav {
     text-align: right;
     display: flex;
     flex-direction: column;
-
 }
 
-.menu-mobile nav a{
+.menu-mobile nav a {
     color: #ffffff;
     font-size: 2em;
     font-weight: 300;
     padding: 25px 8%;
     text-decoration: none;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
-
 }
 
-.menu-mobile nav a:hover{
+.menu-mobile nav a:hover {
+    letter-spacing: 0.2em;
     background-color: var(--cor-secundaria);
-    border-radius: 20px;
-    color: black;
-    text-shadow: 0px 1px 2px rgb(255, 255, 255);
-    
+    color: rgba(255, 255, 255, 0.814);
 }
 
-.menu-mobile .btn-fechar{
-    padding: 20px ;
+.menu-mobile .btn-fechar {
+    padding: 20px;
 }
 
-.menu-mobile .btn-fechar i{
+.menu-mobile .btn-fechar i {
     color: var(--cor-secundaria);
     font-size: 2em;
 }
 
 /* final menu mobile */
+
+/* parallax */
 
 .parallax {
     position: relative;
@@ -176,16 +168,14 @@ header {
 }
 
 #text {
-    
     position: absolute;
     font-family: fonte;
     width: 50%;
     margin-top: 2.5em;
     letter-spacing: 3px;
-    color:white;
+    color: white;
     font-size: 2em;
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
-
 }
 
 .parallax img {
@@ -196,6 +186,7 @@ header {
     pointer-events: none;
 }
 
+/*final  parallax */
 /* informaçoes perfil */
 
 .sec {
@@ -205,22 +196,18 @@ header {
     padding: 100px;
 }
 
-
 section.sec {
     padding: 40px 4%;
-
 }
 
 .flex {
     display: flex;
-
 }
 
 section.sec .flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
-
 }
 
 .sec h1 {
@@ -237,7 +224,6 @@ section.sec .flex {
     font-size: 1.5em;
     margin: 40px 0;
 }
-
 
 .btn-contato button {
     padding: 10px 40px;
@@ -256,7 +242,7 @@ section.sec .flex {
 }
 
 .sec .img-topo-site img {
-    margin-top: -10em;
+    margin-top: 7em;
     background-color: #48b235;
     box-shadow: 0px 0px 8px #26ff00;
     position: relative;
@@ -274,14 +260,12 @@ section.sec .flex {
     100% {
         top: 30px;
     }
-
 }
 
 /* contato */
 
 .wrapper {
     display: inline-flex;
-    margin-top: 7em;
 }
 
 .wrapper .icon {
@@ -312,14 +296,11 @@ section.sec .flex {
 .wrapper .icon span i {
     font-size: 25px;
     line-height: 60px;
-    
 }
 
 .wrapper .icon:hover span i {
     color: rgb(255, 255, 255);
-    
 }
-
 
 .wrapper .icon .tooltip {
     position: absolute;
@@ -351,7 +332,6 @@ section.sec .flex {
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     background: #fff;
-
 }
 
 .wrapper .icon:hover span,
@@ -377,7 +357,6 @@ section.sec .flex {
     background: black;
 } */
 
-
 /* final contato */
 
 /* final informaçoes perfil */
@@ -388,20 +367,15 @@ section.sec .flex {
     background: linear-gradient(0deg, rgba(119, 189, 217, 1) 34%, rgba(0, 51, 41, 1) 79%);
 }
 
-.elemento-agua {
+.elemento-agua h1{
     font-family: fonte;
     letter-spacing: 10px;
-    padding: 2em;
     font-size: 3em;
     text-align: center;
     color: white;
-
 }
 
-
 /* card turotial */
-
-
 .container {
     display: flex;
     justify-content: center;
@@ -450,7 +424,6 @@ section.sec .flex {
     text-align: center;
 }
 
-
 .container .card .box .content h2 {
     font-family: fonte;
     letter-spacing: 1px;
@@ -471,7 +444,7 @@ section.sec .flex {
     width: 3em;
     height: 3em;
     font-size: 1.8em;
-    color: #777;
+    color: #494949;
     z-index: 1;
     transition: 0.5s;
     border-radius: 50%;
@@ -480,7 +453,7 @@ section.sec .flex {
 .container .card:hover .box .content p {
     font-size: 1em;
     font-weight: 300;
-    color: #777;
+    color: black;
     z-index: 1;
     transition: 0.5s;
 }
@@ -517,10 +490,6 @@ section.sec .flex {
 
 /* final card */
 
-
-
-
-
 /* footer */
 footer {
     position: relative;
@@ -556,12 +525,10 @@ footer .social_icon li a {
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
-
 }
 
 footer .social_icon li a:hover {
     transform: translateY(-10px);
-
 }
 
 footer .menu li a {
@@ -644,78 +611,72 @@ footer .onda#onda4 {
     }
 }
 
-
 /* final footer */
 
 /* background animado */
 
 /* feito com tutorial background */
 
-.container{
+.container {
     position: relative;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.bubbles{
+.bubbles {
     position: relative;
     display: flex;
 }
 
-.bubbles span{
+.bubbles span {
     position: relative;
     width: 30px;
     height: 30px;
-    background: radial-gradient(ellipse at top, rgba(255, 255, 255,0.1) 0%, rgba(237, 237, 237, 0.4) 100%);
+    background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.1) 0%, rgba(237, 237, 237, 0.4) 100%);
     margin: 0 4px;
     border-radius: 50%;
     border: 1px solid #ffffff;
     box-shadow: 5px 5px 10px 0px #00a0b9;
     animation: animaf 15s linear infinite;
     animation-duration: calc(125s / var(--i));
-        
-
 }
 
-.bubbles span:nth-child(even){
-    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255,0.1) 0%, rgba(237, 237, 237, 0.4) 100%);
-    box-shadow:0 0 40px #047181,
-    0 0 80px #00a0b9,
-    0 0 100px #00a0b9;
+.bubbles span:nth-child(even) {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.1) 0%, rgba(237, 237, 237, 0.4) 100%);
+    box-shadow: 0 0 40px #047181,
+        0 0 80px #00a0b9,
+        0 0 100px #00a0b9;
 }
 
 @keyframes animaf {
-    0%{
-        transform:translateY(100vh) scale(0);
-        
+    0% {
+        transform: translateY(100vh) scale(0);
     }
-    100%{
-        transform:translateY(-10vh) scale(1);
 
+    100% {
+        transform: translateY(-10vh) scale(1);
     }
 }
 
 /* final background animado */
 
 /* dark mode */
-.dark-mode{
+.dark-mode {
     background-image: url(https://www.shutterstock.com/image-photo/amazing-starry-sky-night-banner-600nw-2288332577.jpg);
-    /* background-repeat: no-repeat;
-    background-size: 90%; */
 }
 
 /* background agua */
 
 /* parallax */
 .dark-mode .sec {
-    background: linear-gradient(6deg, #001410 23%, rgba(0,51,41,1) 73%);
+    background: linear-gradient(6deg, #001410 23%, rgba(0, 51, 41, 1) 73%);
 }
 
 /* final parallax */
 
 .dark-mode .agua {
-   background: linear-gradient(6deg, #003329 23%, #001410 73%);
+    background: linear-gradient(6deg, #003329 23%, #001410 73%);
 }
 
 .dark-mode .elemento-agua {
@@ -728,7 +689,6 @@ footer .onda#onda4 {
     background: #353535;
     color: white;
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-
 }
 
 .dark-mode .container .card:hover .box {
@@ -737,10 +697,8 @@ footer .onda#onda4 {
     background: linear-gradient(0deg, #003329 18%, rgb(130, 130, 130) 67%);
 }
 
-
 .dark-mode .container .card .box .content h2 {
     color: #003329;
-    
 }
 
 .dark-mode .container .card:hover .box .content h2 {
@@ -754,12 +712,10 @@ footer .onda#onda4 {
 
 .dark-mode .container .card .box .content h3 img {
     color: #ffffff;
-
 }
 
 .dark-mode .container .card:hover .box .content p {
     color: #ffffff;
- 
 }
 
 .dark-mode .container .card .box .content a {
@@ -781,28 +737,27 @@ footer .onda#onda4 {
 /* final card */
 
 /* botao dark mode feito com ajuda */
-section{
+section {
     top: 0;
     left: 1;
 }
 
-.darkmode label{
+.darkmode label {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
 }
 
-
-.darkmode input{
+.darkmode input {
     position: absolute;
     opacity: 0;
 }
 
-#light{
+#light {
     position: absolute;
     font-size: 2em;
     color: #393939;
@@ -811,56 +766,66 @@ section{
     transition: 1s ease;
 }
 
-.darkmode input:checked~#light{
-    transition-delay: .8s ;
+.darkmode input:checked~#light {
+    transition-delay: .8s;
     transform: scale(1) rotate(360deg);
 }
 
-
-#dark{
+#dark {
     font-size: 1.5em;
     color: #b0b0b0;
     filter: drop-shadow(0 0 2px rgb(255, 255, 255));
     transition: 1s ease;
-
 }
 
-.darkmode input:checked~#dark{
-    transition-delay: 0s ;
+.darkmode input:checked~#dark {
+    transition-delay: 0s;
     transform: rotate(360deg) scale(0);
 }
 
-.toggle{
+.toggle {
     position: absolute;
     display: block;
     width: 50px;
     height: 50px;
     background: #00000082;
     border-radius: 50%;
-    box-shadow: 
-    inset 0 8px 60px rgba(0, 0 ,0, .1),
-    inset 0 8px 8px rgba(0, 0 ,0, .1),
-    inset 0 -4px 4px rgba(0, 0 ,0, .1);
+    box-shadow:
+        inset 0 8px 60px rgba(0, 0, 0, .1),
+        inset 0 8px 8px rgba(0, 0, 0, .1),
+        inset 0 -4px 4px rgba(0, 0, 0, .1);
     z-index: -1;
     transition: 1s;
 }
 
-.darkmode input:checked~.toggle{
-      background: #00000082;
-
+.darkmode input:checked~.toggle {
+    background: #00000082;
 }
-  /* final botao */
-  
+
+/* final botao */
 /* final dark mode */
 
 /* responsividade */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
 
     /* clases gerais */
     .flex {
         flex-direction: column;
     }
+
+    /* mobile */
+    .btn-abrir-manu i {
+        display: flex;
+    }
+
+    header {
+        padding: 10px 20px;
+        margin: 5em;
+        margin-top: 1em;
+    }
+
+    /* final mobile */
 
     /* informaçoes perfil */
 
@@ -869,13 +834,8 @@ section{
 
     }
 
-    
-
     .sec h1 {
-        font-family: fonte;
         letter-spacing: 3px;
-        text-shadow: 2px 2px 1px rgb(0, 0, 0);
-        color: #fff;
         font-size: 3em;
         line-height: 40px;
     }
@@ -884,7 +844,6 @@ section{
         align-items: center;
         justify-content: center;
         gap: 90px;
-
     }
 
     .sec h1 {
@@ -897,14 +856,13 @@ section{
 
     .btn-contato button {
         font-size: 18px;
-
     }
 
     .sec .img-topo-site img {
         width: 100%;
         height: 100%;
+        margin-top: -3em;
     }
-
 
     /* parallax */
 
@@ -913,7 +871,7 @@ section{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 14vh;
+        height: 12vh;
     }
 
     #text {
@@ -926,55 +884,68 @@ section{
 
     .wrapper {
         display: inline-flex;
-        margin-top: 3em;
-
+        margin-top: 2em;
     }
 
     .wrapper .icon {
-        margin-left: 2.3em;
+        margin-left: 3em;
+    }
+
+    .wrapper .icon span {
+        height: 80px;
+        width: 80px;
+        text-align: center;
+    }
+
+    .wrapper .icon span i {
+        font-size: 30px;
+        margin-top: 10px;
     }
 
     /* final contato */
 
-    /* mobile */
-    .btn-abrir-manu i{
-        display: flex;
+    /* botao dark mode feito com ajuda */
+    section {
+        top: 0;
+        left: 0;
     }
-    /* final mobile */
+
+    .darkmode label {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* final botao */
 
     .elemento-agua {
-        font-size: 1.6em;
+        font-size: 0.7em;
         text-align: center;
-
     }
 
     .logo img {
         margin-left: -3em;
-        height: 3em;
-        width: 3em;
+        margin-top: -1em;
+        width: 4em;
+        height: 4em;
     }
 
-    /* cabeçalho */
     .navigation {
         display: none;
     }
 
-     /* card turotial */
+    /* card turotial */
 
+    .container {
+        display: inline-block;
+        margin-left: 0;
+    }
 
-.container {
-    display: inline-block;
-    margin-left: 0;
+    .container .card .box .content h3 img {
+        font-size: 2.5em;
+    }
 
-}
+    /* final card */
 
-.container .card .box .content h3 img {
-    font-size: 2.5em;
-}
-
-/* final card */
-
-   
 }
 
 /* final responsividade */
